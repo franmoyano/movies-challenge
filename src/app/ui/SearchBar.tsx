@@ -14,7 +14,7 @@ export const SearchBar = ({ genres }: Props) => {
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
-  const [query, setQuery] = useState(searchParams.get('query'))
+  const [query, setQuery] = useState(searchParams.get('query') || '')
 
   const handleChange = useDebouncedCallback((value: string) => {
     const params = new URLSearchParams(searchParams.toString())

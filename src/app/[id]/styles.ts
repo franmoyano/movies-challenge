@@ -2,6 +2,7 @@ export const styles = {
   container: {
     border: '2px solid',
     borderColor: '#DDD',
+    borderRadius: '8px',
     margin: '0px',
     width: '100%',
     padding: '2rem',
@@ -10,7 +11,7 @@ export const styles = {
     gap: '20px'
   },
   image: {
-    borderRadius: '6px'
+    borderRadius: '6px',
   },
   textContainer: {
     display: 'flex',

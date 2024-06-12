@@ -33,11 +33,15 @@ export const MoviesGrid = ({ movies }: Props) => {
             }}
           >
             <Image
-              style={{ borderRadius: '8px' }}
+              style={{
+                borderRadius: '8px'
+              }}
               alt={`${movie.title}-poster`}
               src={`${process.env.IMAGE_BASE_URL}${movie.poster_path}`}
               width={180}
               height={270}
+              quality={25}
+              priority
             />
             <Typography color="#000" variant="h6">{movie.title}</Typography>
           </Link>

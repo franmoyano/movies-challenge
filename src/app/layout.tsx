@@ -4,7 +4,6 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { Container, CssBaseline, ThemeProvider } from "@mui/material";
 import theme from "@/src/mui/theme";
 import { NavBar } from "./ui/NavBar";
-import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "Movies App",
@@ -23,7 +22,7 @@ export default function RootLayout({
           <ThemeProvider theme={theme}>
             <CssBaseline />
             <NavBar />
-            <main className={styles.main}>
+            <main>
               <Container>
                 {children}
               </Container>
