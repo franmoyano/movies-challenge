@@ -22,12 +22,13 @@ export const Paginator = ({ totalPages, page = 1 }: Props) => {
 
   return (
     <Stack spacing={2}>
-      {totalPages && totalPages > 0 &&
+      {totalPages && totalPages > 1 &&
         <Pagination
           onChange={handleChange}
           count={totalPages}
           shape="rounded"
           page={page}
+          sx={{width: '100%', display: 'flex', justifyContent: 'center'}}
         />
       }
     </Stack>

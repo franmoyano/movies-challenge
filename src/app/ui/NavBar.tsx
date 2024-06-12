@@ -9,8 +9,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 export const NavBar = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ backgroundColor: '#000' }}>
-        <Toolbar variant='dense'>
+      <AppBar position="static" sx={{ backgroundColor: '#000', boxShadow: 'unset' }}>
+        <Toolbar variant='regular'>
           <IconButton
             size="large"
             edge="start"
@@ -20,7 +20,10 @@ export const NavBar = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Link style={{fontWeight: 700}} href="/">Movies App</Link>
+          <Box sx={{display: 'flex', gap: '20px'}}>
+            <Link style={{ fontWeight: 700 }} href="/">Inicio</Link>
+            <Link style={{ fontWeight: 700 }} href="/search">Buscar</Link>
+          </Box>
         </Toolbar>
       </AppBar>
     </Box>

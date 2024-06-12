@@ -1,5 +1,13 @@
-import { redirect } from "next/navigation";
+import { MoviesGrid } from "./ui/MoviesGrid";
+import { getPopularMovies } from "./actions/actions";
 
 export default async function Home() {
-  redirect('/search')
+  const movies = await getPopularMovies()
+
+  return (
+    <>
+      <h2>Populares ahora</h2>
+      <MoviesGrid movies={movies} />
+    </>
+  )
 }
