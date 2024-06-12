@@ -13,7 +13,7 @@ export interface SearchMovieResponse {
   results: {
     adult: boolean
     backdrop_path: null,
-    genre_ids: [],
+    genre_ids: number[],
     id: number
     original_language: string
     original_title: string

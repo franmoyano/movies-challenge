@@ -19,7 +19,7 @@ export const MoviesGrid = ({ movies }: Props) => {
             justifyContent: 'center',
             alignItems: 'baseline',
             borderRadius: '6px',
-            width: '200px'
+            width: '180px'
           }}
         >
           <Link
@@ -36,7 +36,7 @@ export const MoviesGrid = ({ movies }: Props) => {
               style={{ borderRadius: '8px' }}
               alt={`${movie.title}-poster`}
               src={`${process.env.IMAGE_BASE_URL}${movie.poster_path}`}
-              width={200}
+              width={180}
               height={270}
             />
             <Typography color="#000" variant="h6">{movie.title}</Typography>

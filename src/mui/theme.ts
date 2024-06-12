@@ -16,13 +16,13 @@ const theme = createTheme({
   components: {
     MuiOutlinedInput: {
       styleOverrides: {
-        input: {
-          height: '15px',
-          padding: '12px 20px',
+        root: {
+          height: '40px',
+          padding: '12px 10px',
           fontWeight: 500
         }
       }
-    }
+    },
   }
 });
 

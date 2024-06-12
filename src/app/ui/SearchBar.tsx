@@ -1,11 +1,16 @@
 "use client"
 
-import { TextField } from "@mui/material"
+import { Genre } from "@/src/model/genre"
+import { Grid, Select, TextField } from "@mui/material"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import { useState } from "react"
 import { useDebouncedCallback } from "use-debounce"
 
-export const SearchBar = () => {
+interface Props {
+  genres: Genre[]
+}
+
+export const SearchBar = ({ genres }: Props) => {
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -25,14 +30,26 @@ export const SearchBar = () => {
   }, 500)
 
   return (
-    <TextField
-      value={query}
-      sx={{ width: '100%' }}
-      onChange={({ target }) => {
-        setQuery(target.value)
-        handleChange(target.value)
-      }}
-      autoComplete="off"
-    />
+    <Grid container>
+      <Grid sm={10}>
+        <TextField
+          value={query}
+          sx={{ width: '100%' }}
+          onChange={({ target }) => {
+            setQuery(target.value)
+            handleChange(target.value)
+          }}
+          autoComplete="off"
+          placeholder="Ej: Top Gun"
+        />
+      </Grid>
+      <Grid sm={2}>
+        <Select fullWidth>
+          {genres.map(genre =>
+            <option key={genre.id} value={genre.id}>{genre.name}</option>
+          )}
+        </Select>
+      </Grid>
+    </Grid>
   )
 }
