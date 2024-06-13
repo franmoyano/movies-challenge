@@ -18,11 +18,21 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           height: '40px',
-          padding: '12px 10px',
-          fontWeight: 500
+          fontWeight: 400,
+          fontSize: '13px'
         }
       }
     },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          borderRadius: '5px'
+        },
+        outlined: {
+          color: '#000'
+        }
+      }
+    }
   }
 });
 
