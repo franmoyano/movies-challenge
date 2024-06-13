@@ -18,6 +18,6 @@ export const discoverMovies = async (params: DiscoverMovieRequest): Promise<Sear
 
 export const getGenres = async (): Promise<{ genres: Genre[] }> => {
   return await axiosInstance
-    .get('/genre/movie/list', { params: { language: 'es' } })
+    .get('/genre/movie/list')
     .then(({ data }) => data)
 }

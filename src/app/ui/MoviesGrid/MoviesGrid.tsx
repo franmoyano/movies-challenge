@@ -1,5 +1,5 @@
 import { SearchMovieResponse } from "@/src/model/search"
-import { Box, Grid, List, Typography } from "@mui/material"
+import { Box, Grid, Typography } from "@mui/material"
 import { MovieCard } from "../MovieCard/MovieCard"
 import { styles } from "./MoviesGrid.styles"
 

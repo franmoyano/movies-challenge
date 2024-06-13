@@ -22,9 +22,6 @@ export const styles = {
     margin: '265px 10px 0 -8px'
   },
   image: {
-    borderRadius: '8px',
-    marginInline: 'auto',
-    borderBottomLeftRadius: '0px',
-    borderBottomRightRadius: '0px',
+    marginInline: 'auto'
   }
 }

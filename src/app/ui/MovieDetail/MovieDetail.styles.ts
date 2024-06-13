@@ -13,16 +13,6 @@ export const styles = {
     alignItems: 'baseline',
     gap: '10px'
   },
-  valoration: (average: number) => ({
-    backgroundColor: average >= 7 ? 'green' : 'red',
-    color: '#FFF',
-    borderRadius: '10px',
-    width: '55px',
-    height: '35px',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
-  }),
   tagLine: {
     fontStyle: 'italic'
   },
@@ -36,6 +26,8 @@ export const styles = {
     display: 'flex',
     flexDirection: direction,
     gap: '20px',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    position: 'relative',
+    overflow: 'hidden'
   })
 }

@@ -22,7 +22,7 @@ export const MovieCard = ({ movie }: Props) => {
         key={movie.id}
         href={`/${movie.id}`}
         scroll={false}
-        style={{ ...styles.link, flexDirection: 'column' }}
+        style={{ ...styles.link, flexDirection: 'column', overflow: 'hidden' }}
       >
         <AverageVoteIcon vote={movie.vote_average} sx={styles.voteIcon} />
         <Image

@@ -19,7 +19,7 @@ const theme = createTheme({
         root: {
           height: '40px',
           fontWeight: 400,
-          fontSize: '13px'
+          fontSize: '14px'
         }
       }
     },

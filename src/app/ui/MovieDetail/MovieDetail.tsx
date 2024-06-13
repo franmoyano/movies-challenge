@@ -16,14 +16,13 @@ export const MovieDetailComponent = ({ movie }: Props) => {
     <Container sx={styles.container('row')}>
       <Grid>
         <Image
-          alt={`${movie.title}-poster-img`}
+          alt={`${movie.title} poster img`}
           src={`${process.env.IMAGE_BASE_URL}${movie.poster_path}`}
           width={260}
           height={400}
           style={styles.image}
           priority
-        >
-        </Image>
+        />
       </Grid>
       <Grid sx={styles.textContainer}>
         <Typography variant='h4' fontWeight={700}>{movie.title} ({dayjs(movie.release_date).get('year')})</Typography>
@@ -50,11 +49,9 @@ export const MovieDetailComponent = ({ movie }: Props) => {
           <AverageVoteIcon vote={movie.vote_average} />
         </Box>
 
-        <Box sx={{ marginTop: '1rem' }}>
-          <article>
-            <Typography variant='h5'>Sinopsis</Typography>
-            <p>{movie.overview}</p>
-          </article>
+        <Box sx={{ marginTop: '1rem', pr: '5rem' }}>
+          <Typography variant='h5'>Sinopsis</Typography>
+          <p>{movie.overview}</p>
         </Box>
 
         <Box><Typography variant="body2">Ingresos: US{movie.revenue.toLocaleString('en-US', {

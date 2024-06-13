@@ -10,8 +10,8 @@ export const getMovieDetail = async (id: string): Promise<MovieDetail> => {
     .then(({ data }) => data)
 }
 
-export const getRecommendations = async (id: string): Promise<SearchMovieResponse> => {
+export const getSimilars = async (id: string): Promise<SearchMovieResponse> => {
   return await axiosInstance
-    .get(`/movie/${id}/recommendations`)
+    .get(`/movie/${id}/similar`)
     .then(({ data }) => data)
 }

@@ -12,20 +12,23 @@ interface Props {
 
 export const CustomCarousel = ({ children }: Props) => {
   return (
-    <Carousel
-      itemsToShow={3}
-      transitionMs={1000}
-      pagination={false}
-      renderArrow={(a) =>
-        <Button
-          color="warning"
-          onClick={a.onClick}>{a.type === 'PREV' ? <ArrowBackIosIcon /> : <ArrowForwardIosIcon />}
-        </Button>
-      }
-      renderLoading={<></>}
-    >
-      {children}
-    </Carousel>
+    <>
+      <Carousel
+        itemsToShow={3}
+        transitionMs={1000}
+        pagination={false}
+        renderArrow={(a) =>
+          <Button
+            color="warning"
+            onClick={a.onClick}>{a.type === 'PREV' ? <ArrowBackIosIcon /> : <ArrowForwardIosIcon />}
+          </Button>
+        }
+        renderLoading={<></>}
+      >
+        {children}
+      </Carousel>
+
+    </>
   )
 }
 
