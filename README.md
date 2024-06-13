@@ -29,5 +29,4 @@ pnpm dev
 # or
 bun dev
 ```
-
-### Enshure you have an .env file. In this project i've let a .env.example wich is useful to start developing
+Ensure you have an .env file. In this project, I've provided a .env.example file which is useful to start developing, but this is only for **example purposes**.
